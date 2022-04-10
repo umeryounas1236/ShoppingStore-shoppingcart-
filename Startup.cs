@@ -31,7 +31,8 @@ namespace Shopping_Store
             services.AddDbContext<AppDBContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("SportsStoreConnection"));
             });
-            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddControllersWithViews().AddRazor
+            RuntimeCompilation();
             services.AddRazorPages();
             services.AddScoped<IStoreRepository,StoreRepository>();
             services.AddScoped<IOrderRepository, OrderRepository>();
